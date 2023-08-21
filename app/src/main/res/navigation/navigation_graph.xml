@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/dayViewFragment">
+
+    <fragment
+        android:id="@+id/dayViewFragment"
+        android:name="com.example.calendarfragments.DayViewFragment"
+        android:label="@string/day_view_fragment"
+        tools:layout="@layout/day_view_fragment" >
+         <action
+             android:id="@+id/dayToWeek"
+             app:destination="@id/weekViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weekViewFragment"
+        android:name="com.example.calendarfragments.WeekViewFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/week_view_fragment" />
+
+    <fragment
+        android:id="@+id/monthViewFragment"
+        android:name="com.example.calendarfragments.MonthViewFragment"
+        android:label="fragment_month_view"
+        tools:layout="@layout/month_view_fragment" />
+</navigation>
